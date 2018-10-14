@@ -32,7 +32,7 @@ namespace SharpLesson3 {
                 return y;
             }
 
-            public Complex Div(Complex x) {
+            public Complex Sub(Complex x) {
                 Complex y;
                 y.im = im - x.im;
                 y.re = re - x.re;
@@ -70,7 +70,7 @@ namespace SharpLesson3 {
                 return y;
             }
 
-            public ComplexClass Div(ComplexClass x) {
+            public ComplexClass Sub(ComplexClass x) {
                 ComplexClass y = new ComplexClass();
                 y.re = re - x.re;
                 y.im = im - x.im;
@@ -104,7 +104,7 @@ namespace SharpLesson3 {
             b.im = -5.67;
 
             Console.Write("Сложение ({0}) + ({1}): {2}\n", a, b, a.Plus(b));
-            Console.Write("Вычитание ({0}) - ({1}): {2}\n", a, b, a.Div(b));
+            Console.Write("Вычитание ({0}) - ({1}): {2}\n", a, b, a.Sub(b));
             Console.Write("Умножение ({0}) * ({1}): {2}\n", a, b, a.Multi(b));
 
             //работа через класс
@@ -131,7 +131,7 @@ namespace SharpLesson3 {
                         break;
                     case ConsoleKey.D2:
                     case ConsoleKey.NumPad2:
-                        Console.Write("Вычитание ({0}) - ({1}): {2}\n", x, y, x.Div(y));
+                        Console.Write("Вычитание ({0}) - ({1}): {2}\n", x, y, x.Sub(y));
                         break;
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
