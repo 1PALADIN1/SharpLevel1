@@ -15,7 +15,7 @@ namespace SharpLesson3 {
         }
 
         static void Menu() {
-            Console.WriteLine("Задания:\n0. Выход\n1. Структура Complex\n2. Сумма положительных четных чисел");
+            Console.WriteLine("Задания:\n0. Выход\n1. Структура Complex\n2. Сумма положительных четных чисел\n3. Дробные числа");
             bool work = true;
 
             do {
@@ -36,12 +36,15 @@ namespace SharpLesson3 {
                     case ConsoleKey.NumPad2:
                         Task2();
                         break;
+                    case ConsoleKey.D3:
+                    case ConsoleKey.NumPad3:
+                        Task3();
+                        break;
                     default:
                         Console.WriteLine("Команда не распознана!");
                         break;
                 }
             } while (work);
-
         }
 
         static void FinishProgram() {
