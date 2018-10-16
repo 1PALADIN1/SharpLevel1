@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 namespace SharpLesson4 {
     partial class Program {
         static void Main(string[] args) {
+            Menu();
+            FinishProgram();
         }
 
         static void Menu() {
-            Console.WriteLine("Задания:\n0. Выход\n1. Структура Complex\n2. Сумма положительных четных чисел\n3. Дробные числа");
+            Console.WriteLine("Задания:\n0. Выход\n1. Целочисленный массив из 20 элементов\n2. Сумма положительных четных чисел\n3. Дробные числа");
             bool work = true;
 
             do {
@@ -25,7 +27,7 @@ namespace SharpLesson4 {
                         break;
                     case ConsoleKey.D1:
                     case ConsoleKey.NumPad1:
-                        //Task1();
+                        Task1();
                         break;
                     case ConsoleKey.D2:
                     case ConsoleKey.NumPad2:
