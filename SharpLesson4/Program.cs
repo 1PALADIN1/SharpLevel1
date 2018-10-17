@@ -14,7 +14,8 @@ namespace SharpLesson4 {
         }
 
         static void Menu() {
-            Console.WriteLine("Задания:\n0. Выход\n1. Целочисленный массив из 20 элементов\n2. Статический класс\n3. Класс для работы с одномерным массивом");
+            Console.WriteLine("Задания:\n0. Выход\n1. Целочисленный массив из 20 элементов\n2. Статический класс" +
+                "\n3. Класс для работы с одномерным массивом\n4. Задача с логинами");
             bool work = true;
 
             do {
@@ -38,6 +39,10 @@ namespace SharpLesson4 {
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
                         Task3();
+                        break;
+                    case ConsoleKey.D4:
+                    case ConsoleKey.NumPad4:
+                        Task4();
                         break;
                     default:
                         Console.WriteLine("Команда не распознана!");
