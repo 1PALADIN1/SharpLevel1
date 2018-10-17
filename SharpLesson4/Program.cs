@@ -1,4 +1,6 @@
-﻿using System;
+﻿/* Малиновский Руслан */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,7 @@ namespace SharpLesson4 {
         }
 
         static void Menu() {
-            Console.WriteLine("Задания:\n0. Выход\n1. Целочисленный массив из 20 элементов\n2. Статический класс\n3. Дробные числа");
+            Console.WriteLine("Задания:\n0. Выход\n1. Целочисленный массив из 20 элементов\n2. Статический класс\n3. Класс для работы с одномерным массивом");
             bool work = true;
 
             do {
@@ -35,7 +37,7 @@ namespace SharpLesson4 {
                         break;
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
-                        //Task3();
+                        Task3();
                         break;
                     default:
                         Console.WriteLine("Команда не распознана!");
