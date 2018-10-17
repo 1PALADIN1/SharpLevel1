@@ -12,7 +12,7 @@ namespace SharpLesson4 {
         }
 
         static void Menu() {
-            Console.WriteLine("Задания:\n0. Выход\n1. Целочисленный массив из 20 элементов\n2. Сумма положительных четных чисел\n3. Дробные числа");
+            Console.WriteLine("Задания:\n0. Выход\n1. Целочисленный массив из 20 элементов\n2. Статический класс\n3. Дробные числа");
             bool work = true;
 
             do {
@@ -31,7 +31,7 @@ namespace SharpLesson4 {
                         break;
                     case ConsoleKey.D2:
                     case ConsoleKey.NumPad2:
-                        //Task2();
+                        Task2();
                         break;
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
