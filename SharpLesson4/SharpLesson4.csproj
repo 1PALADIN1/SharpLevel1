@@ -47,9 +47,16 @@
     <Compile Include="Task2.cs" />
     <Compile Include="Task3.cs" />
     <Compile Include="Task4.cs" />
+    <Compile Include="Task5.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpLesson4Lib\SharpLesson4Lib.csproj">
+      <Project>{2d2bab56-2f8d-4eb3-adcf-adbde2756c9d}</Project>
+      <Name>SharpLesson4Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
