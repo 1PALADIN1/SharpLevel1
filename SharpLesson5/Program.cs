@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SharpLesson5 {
-    class Program {
+    partial class Program {
         static void Main(string[] args) {
             Menu();
             FinishProgram();
         }
 
         static void Menu() {
-            Console.WriteLine("Задания:\n0. Выход\n1. Целочисленный массив из 20 элементов\n2. Статический класс" +
+            Console.WriteLine("Задания:\n0. Выход\n1. Проверка корректности ввода логина\n2. Статический класс" +
                 "\n3. Класс для работы с одномерным массивом\n4. Задача с логинами\n5. Реализация библиотеки");
             bool work = true;
 
@@ -28,7 +28,7 @@ namespace SharpLesson5 {
                         break;
                     case ConsoleKey.D1:
                     case ConsoleKey.NumPad1:
-                        //Task1();
+                        Task1();
                         break;
                     case ConsoleKey.D2:
                     case ConsoleKey.NumPad2:
