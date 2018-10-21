@@ -1,4 +1,6 @@
-﻿using System;
+﻿/* Малиновский Руслан */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,7 @@ namespace SharpLesson5 {
         }
 
         static void Menu() {
-            Console.WriteLine("Задания:\n0. Выход\n1. Проверка корректности ввода логина\n2. Статический класс" +
+            Console.WriteLine("Задания:\n0. Выход\n1. Проверка корректности ввода логина\n2. Статический класс Message" +
                 "\n3. Класс для работы с одномерным массивом\n4. Задача с логинами\n5. Реализация библиотеки");
             bool work = true;
 
@@ -32,7 +34,7 @@ namespace SharpLesson5 {
                         break;
                     case ConsoleKey.D2:
                     case ConsoleKey.NumPad2:
-                        //Task2();
+                        Task2();
                         break;
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
