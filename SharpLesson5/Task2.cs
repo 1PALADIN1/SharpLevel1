@@ -80,8 +80,6 @@ namespace SharpLesson5 {
 
         //д) ***Создать метод, который производит частотный анализ текста.В качестве параметра в него передается массив слов и текст,
         //в качестве результата метод возвращает сколько раз каждое из слов массива входит в этот текст.Здесь требуется использовать класс Dictionary.
-        
-        //    !!!! для работы метода, нужно перенести text.txt в Debug !!!!
         public static Dictionary<string, int> FreqAnalysis(string[] words, string textFile) {
             Dictionary<string, int> wordDictionaty = new Dictionary<string, int>();
 
