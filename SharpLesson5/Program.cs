@@ -42,7 +42,7 @@ namespace SharpLesson5 {
                         break;
                     case ConsoleKey.D4:
                     case ConsoleKey.NumPad4:
-                        //Task4();
+                        Task4();
                         break;
                     default:
                         Console.WriteLine("Команда не распознана!");

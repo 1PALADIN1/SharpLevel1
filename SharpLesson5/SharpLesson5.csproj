@@ -46,11 +46,15 @@
     <Compile Include="Task1.cs" />
     <Compile Include="Task2.cs" />
     <Compile Include="Task3.cs" />
+    <Compile Include="Task4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="students.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="text.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
