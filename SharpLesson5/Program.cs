@@ -15,7 +15,7 @@ namespace SharpLesson5 {
 
         static void Menu() {
             Console.WriteLine("Задания:\n0. Выход\n1. Проверка корректности ввода логина\n2. Статический класс Message" +
-                "\n3. Класс для работы с одномерным массивом\n4. Задача с логинами\n5. Реализация библиотеки");
+                "\n3. Перестановка строк в методе\n4. Задача ЕГЭ");
             bool work = true;
 
             do {
@@ -38,15 +38,11 @@ namespace SharpLesson5 {
                         break;
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
-                        //Task3();
+                        Task3();
                         break;
                     case ConsoleKey.D4:
                     case ConsoleKey.NumPad4:
                         //Task4();
-                        break;
-                    case ConsoleKey.D5:
-                    case ConsoleKey.NumPad5:
-                        //Task5();
                         break;
                     default:
                         Console.WriteLine("Команда не распознана!");
