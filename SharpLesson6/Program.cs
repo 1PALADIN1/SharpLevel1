@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace SharpLesson6 {
-    class Program {
+    partial class Program {
         static void Main(string[] args) {
             Menu();
             FinishProgram();
@@ -29,7 +29,7 @@ namespace SharpLesson6 {
                         break;
                     case ConsoleKey.D1:
                     case ConsoleKey.NumPad1:
-                        //Task1();
+                        Task1();
                         break;
                     case ConsoleKey.D2:
                     case ConsoleKey.NumPad2:
