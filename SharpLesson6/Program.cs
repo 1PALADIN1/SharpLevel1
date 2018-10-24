@@ -14,7 +14,7 @@ namespace SharpLesson6 {
 
         static void Menu() {
             Console.WriteLine("Задания:\n0. Выход\n1. Проверка корректности ввода логина\n2. Программа нахождения минимума функции" +
-                "\n3. Перестановка строк в методе\n4. Задача ЕГЭ");
+                "\n3. Программа \"Пример использования коллекций\"");
             bool work = true;
 
             do {
@@ -37,11 +37,7 @@ namespace SharpLesson6 {
                         break;
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
-                        //Task3();
-                        break;
-                    case ConsoleKey.D4:
-                    case ConsoleKey.NumPad4:
-                        //Task4();
+                        Task3();
                         break;
                     default:
                         Console.WriteLine("Команда не распознана!");
