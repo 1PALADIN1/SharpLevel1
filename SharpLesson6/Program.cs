@@ -13,7 +13,7 @@ namespace SharpLesson6 {
         }
 
         static void Menu() {
-            Console.WriteLine("Задания:\n0. Выход\n1. Проверка корректности ввода логина\n2. Статический класс Message" +
+            Console.WriteLine("Задания:\n0. Выход\n1. Проверка корректности ввода логина\n2. Программа нахождения минимума функции" +
                 "\n3. Перестановка строк в методе\n4. Задача ЕГЭ");
             bool work = true;
 
@@ -33,7 +33,7 @@ namespace SharpLesson6 {
                         break;
                     case ConsoleKey.D2:
                     case ConsoleKey.NumPad2:
-                        //Task2();
+                        Task2();
                         break;
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
