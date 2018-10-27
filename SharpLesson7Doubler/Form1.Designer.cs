@@ -28,11 +28,11 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.plusButton = new System.Windows.Forms.Button();
+            this.multiButton = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.finishLabel = new System.Windows.Forms.Label();
+            this.currebtTextBox = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,67 +60,75 @@
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.NewToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
-            // button1
+            // plusButton
             // 
-            this.button1.Location = new System.Drawing.Point(40, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "+1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.plusButton.Enabled = false;
+            this.plusButton.Location = new System.Drawing.Point(40, 60);
+            this.plusButton.Name = "plusButton";
+            this.plusButton.Size = new System.Drawing.Size(75, 23);
+            this.plusButton.TabIndex = 1;
+            this.plusButton.Text = "+1";
+            this.plusButton.UseVisualStyleBackColor = true;
+            this.plusButton.Click += new System.EventHandler(this.PlusButton_Click);
             // 
-            // button2
+            // multiButton
             // 
-            this.button2.Location = new System.Drawing.Point(40, 120);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "x2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.multiButton.Enabled = false;
+            this.multiButton.Location = new System.Drawing.Point(40, 120);
+            this.multiButton.Name = "multiButton";
+            this.multiButton.Size = new System.Drawing.Size(75, 23);
+            this.multiButton.TabIndex = 2;
+            this.multiButton.Text = "x2";
+            this.multiButton.UseVisualStyleBackColor = true;
+            this.multiButton.Click += new System.EventHandler(this.MultiButton_Click);
             // 
-            // button3
+            // resetButton
             // 
-            this.button3.Location = new System.Drawing.Point(40, 180);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Reset";
-            this.button3.UseVisualStyleBackColor = true;
+            this.resetButton.Enabled = false;
+            this.resetButton.Location = new System.Drawing.Point(40, 180);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(75, 23);
+            this.resetButton.TabIndex = 3;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
-            // label1
+            // finishLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(233, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "?";
+            this.finishLabel.AutoSize = true;
+            this.finishLabel.Location = new System.Drawing.Point(233, 60);
+            this.finishLabel.Name = "finishLabel";
+            this.finishLabel.Size = new System.Drawing.Size(13, 13);
+            this.finishLabel.TabIndex = 4;
+            this.finishLabel.Text = "?";
             // 
-            // textBox1
+            // currebtTextBox
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(236, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.currebtTextBox.Enabled = false;
+            this.currebtTextBox.Location = new System.Drawing.Point(236, 120);
+            this.currebtTextBox.Name = "currebtTextBox";
+            this.currebtTextBox.Size = new System.Drawing.Size(100, 20);
+            this.currebtTextBox.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.currebtTextBox);
+            this.Controls.Add(this.finishLabel);
+            this.Controls.Add(this.resetButton);
+            this.Controls.Add(this.multiButton);
+            this.Controls.Add(this.plusButton);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -139,11 +147,11 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button plusButton;
+        private System.Windows.Forms.Button multiButton;
+        private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.Label finishLabel;
+        private System.Windows.Forms.TextBox currebtTextBox;
     }
 }
 
