@@ -33,6 +33,7 @@
             this.resetButton = new System.Windows.Forms.Button();
             this.finishLabel = new System.Windows.Forms.Label();
             this.currebtTextBox = new System.Windows.Forms.TextBox();
+            this.commandLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,11 +120,21 @@
             this.currebtTextBox.Size = new System.Drawing.Size(100, 20);
             this.currebtTextBox.TabIndex = 5;
             // 
+            // commandLabel
+            // 
+            this.commandLabel.AutoSize = true;
+            this.commandLabel.Location = new System.Drawing.Point(302, 60);
+            this.commandLabel.Name = "commandLabel";
+            this.commandLabel.Size = new System.Drawing.Size(13, 13);
+            this.commandLabel.TabIndex = 6;
+            this.commandLabel.Text = "?";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.commandLabel);
             this.Controls.Add(this.currebtTextBox);
             this.Controls.Add(this.finishLabel);
             this.Controls.Add(this.resetButton);
@@ -152,6 +163,7 @@
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Label finishLabel;
         private System.Windows.Forms.TextBox currebtTextBox;
+        private System.Windows.Forms.Label commandLabel;
     }
 }
 
