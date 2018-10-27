@@ -1,5 +1,5 @@
 ﻿namespace SharpLesson7Doubler {
-    partial class Form1 {
+    partial class MainForm {
         /// <summary>
         /// Обязательная переменная конструктора.
         /// </summary>
@@ -23,7 +23,7 @@
         /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -34,6 +34,7 @@
             this.finishLabel = new System.Windows.Forms.Label();
             this.currebtTextBox = new System.Windows.Forms.TextBox();
             this.commandLabel = new System.Windows.Forms.Label();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,14 +60,14 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem.Text = "New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.NewToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -129,11 +130,23 @@
             this.commandLabel.TabIndex = 6;
             this.commandLabel.Text = "?";
             // 
-            // Form1
+            // cancelButton
+            // 
+            this.cancelButton.Enabled = false;
+            this.cancelButton.Location = new System.Drawing.Point(40, 240);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.TabIndex = 7;
+            this.cancelButton.Text = "Cancel";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.commandLabel);
             this.Controls.Add(this.currebtTextBox);
             this.Controls.Add(this.finishLabel);
@@ -143,7 +156,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Удвоитель";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -164,6 +177,7 @@
         private System.Windows.Forms.Label finishLabel;
         private System.Windows.Forms.TextBox currebtTextBox;
         private System.Windows.Forms.Label commandLabel;
+        private System.Windows.Forms.Button cancelButton;
     }
 }
 

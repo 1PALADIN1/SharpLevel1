@@ -10,6 +10,12 @@ namespace SharpLesson7Doubler {
         int finishNumber;
         int currentNumber;
         int commandCount;
+        Stack<CommandType> history; //очередь для записи истории ходов
+
+        //ходы хранятся ввиде перечислений
+        enum CommandType {
+            PLUS, MULTI
+        };
 
         public int FinishNumber {
             get {
@@ -34,21 +40,46 @@ namespace SharpLesson7Doubler {
             finishNumber = rand.Next(min, max + 1);
             currentNumber = 1;
             commandCount = 0;
+            history = new Stack<CommandType>();
         }
 
         public void Plus() {
             currentNumber++;
             commandCount++;
+
+            //запись хода в историю
+            history.Push(CommandType.PLUS);
         }
 
         public void Multiply() {
             currentNumber *= 2;
             commandCount++;
+
+            //запись хода в историю
+            history.Push(CommandType.MULTI);
         }
 
         public void Reset() {
             currentNumber = 1;
             commandCount = 0;
+        }
+
+        //отмена хода
+        public void CancelTurn() {
+            if (history.Count == 0) throw new Exception("Не осталось ходов для отмены!");
+
+            //если остались ходы
+            CommandType cType = history.Pop();
+
+            switch(cType) {
+                case CommandType.PLUS:
+                    currentNumber--;
+                    break;
+                case CommandType.MULTI:
+                    currentNumber /= 2;
+                    break;
+            }
+            commandCount--;
         }
     }
 }

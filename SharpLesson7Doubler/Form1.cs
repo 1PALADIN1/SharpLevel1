@@ -16,10 +16,10 @@ using System.Windows.Forms;
 в) * Добавить кнопку «Отменить», которая отменяет последние ходы.
 */
 namespace SharpLesson7Doubler {
-    public partial class Form1 : Form {
+    public partial class MainForm : Form {
         Doubler doubler;
 
-        public Form1() {
+        public MainForm() {
             InitializeComponent();
         }
 
@@ -36,6 +36,7 @@ namespace SharpLesson7Doubler {
             plusButton.Enabled = true;
             multiButton.Enabled = true;
             resetButton.Enabled = true;
+            cancelButton.Enabled = true;
 
             UpdateInfo();
         }
@@ -60,6 +61,15 @@ namespace SharpLesson7Doubler {
         private void ResetButton_Click(object sender, EventArgs e) {
             doubler.Reset();
             UpdateInfo();
+        }
+
+        private void CancelButton_Click(object sender, EventArgs e) {
+            try {
+                doubler.CancelTurn();
+                UpdateInfo();
+            } catch (Exception exc) {
+                MessageBox.Show(exc.Message);
+            }
         }
     }
 }
