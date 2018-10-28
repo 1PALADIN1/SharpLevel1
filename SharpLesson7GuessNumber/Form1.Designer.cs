@@ -28,8 +28,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelDialog = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonGuess = new System.Windows.Forms.Button();
+            this.tbGuess = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,27 +72,29 @@
             this.buttonStart.TabIndex = 3;
             this.buttonStart.Text = "Начать";
             this.buttonStart.UseVisualStyleBackColor = false;
+            this.buttonStart.Click += new System.EventHandler(this.ButtonStart_Click);
             // 
-            // button1
+            // buttonGuess
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(298, 227);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "buttonGeuss";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
+            this.buttonGuess.BackColor = System.Drawing.Color.White;
+            this.buttonGuess.Enabled = false;
+            this.buttonGuess.Location = new System.Drawing.Point(298, 227);
+            this.buttonGuess.Name = "buttonGuess";
+            this.buttonGuess.Size = new System.Drawing.Size(75, 23);
+            this.buttonGuess.TabIndex = 4;
+            this.buttonGuess.Text = "Угадать";
+            this.buttonGuess.UseVisualStyleBackColor = false;
+            this.buttonGuess.Visible = false;
+            this.buttonGuess.Click += new System.EventHandler(this.ButtonGuess_Click);
             // 
-            // textBox1
+            // tbGuess
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(298, 201);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(75, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Visible = false;
+            this.tbGuess.Enabled = false;
+            this.tbGuess.Location = new System.Drawing.Point(298, 201);
+            this.tbGuess.Name = "tbGuess";
+            this.tbGuess.Size = new System.Drawing.Size(75, 20);
+            this.tbGuess.TabIndex = 5;
+            this.tbGuess.Visible = false;
             // 
             // MainFrom
             // 
@@ -101,8 +103,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.buttonStart);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.tbGuess);
+            this.Controls.Add(this.buttonGuess);
             this.Controls.Add(this.labelDialog);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -126,8 +128,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label labelDialog;
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonGuess;
+        private System.Windows.Forms.TextBox tbGuess;
     }
 }
 
