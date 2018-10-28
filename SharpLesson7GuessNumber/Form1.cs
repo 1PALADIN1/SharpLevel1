@@ -19,5 +19,12 @@ namespace SharpLesson7GuessNumber {
         public MainFrom() {
             InitializeComponent();
         }
+
+        private void MainFrom_Load(object sender, EventArgs e) {
+            labelDialog.Text = "Добро пожаловать в мой трактир, путник!\n" +
+                "Не хочешь сыграть со мной в игру?\n" +
+                "Я загадываю число от 1 до 100, а твоя\n" +
+                "задача угадать его за 5 попыток.";
+        }
     }
 }
