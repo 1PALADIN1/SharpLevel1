@@ -37,20 +37,24 @@ namespace SharpLesson7GuessNumber {
             labelDialog.Text = startText;
             buttonStart.Enabled = true;
             buttonStart.Visible = true;
-            buttonGuess.Visible = false;
             buttonGuess.Enabled = false;
-            tbGuess.Visible = false;
+            buttonGuess.Visible = false;
+            buttonRestart.Enabled = false;
+            buttonRestart.Visible = false;
             tbGuess.Enabled = false;
+            tbGuess.Visible = false;
         }
 
         //кнопка "Начать"
         private void ButtonStart_Click(object sender, EventArgs e) {
             buttonStart.Enabled = false;
             buttonStart.Visible = false;
-            buttonGuess.Visible = true;
             buttonGuess.Enabled = true;
-            tbGuess.Visible = true;
+            buttonGuess.Visible = true;
+            buttonRestart.Enabled = true;
+            buttonRestart.Visible = true;
             tbGuess.Enabled = true;
+            tbGuess.Visible = true;
 
             labelDialog.Text = String.Format("Я загадал число. Какое число я загадал?\n" +
                 "Осталось попыток: {0}", game.TriesLeft);
@@ -81,6 +85,13 @@ namespace SharpLesson7GuessNumber {
                 }
             }
             tbGuess.Text = String.Empty;
+        }
+
+        private void ButtonRestart_Click(object sender, EventArgs e) {
+            InitGame(String.Format("Добро пожаловать в мой трактир, путник!\n" +
+                "Не хочешь сыграть со мной в игру?\n" +
+                "Я загадываю число от {0} до {1}, а твоя\n" +
+                "задача угадать его за {2} попыток.", min, max, GameController.MAX_TRY_COUNT));
         }
     }
 }

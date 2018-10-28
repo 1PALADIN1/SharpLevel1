@@ -30,6 +30,7 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonGuess = new System.Windows.Forms.Button();
             this.tbGuess = new System.Windows.Forms.TextBox();
+            this.buttonRestart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,7 +79,7 @@
             // 
             this.buttonGuess.BackColor = System.Drawing.Color.White;
             this.buttonGuess.Enabled = false;
-            this.buttonGuess.Location = new System.Drawing.Point(298, 227);
+            this.buttonGuess.Location = new System.Drawing.Point(298, 230);
             this.buttonGuess.Name = "buttonGuess";
             this.buttonGuess.Size = new System.Drawing.Size(75, 23);
             this.buttonGuess.TabIndex = 4;
@@ -90,11 +91,22 @@
             // tbGuess
             // 
             this.tbGuess.Enabled = false;
-            this.tbGuess.Location = new System.Drawing.Point(298, 201);
+            this.tbGuess.Location = new System.Drawing.Point(298, 200);
             this.tbGuess.Name = "tbGuess";
             this.tbGuess.Size = new System.Drawing.Size(75, 20);
             this.tbGuess.TabIndex = 5;
             this.tbGuess.Visible = false;
+            // 
+            // buttonRestart
+            // 
+            this.buttonRestart.BackColor = System.Drawing.Color.White;
+            this.buttonRestart.Location = new System.Drawing.Point(298, 260);
+            this.buttonRestart.Name = "buttonRestart";
+            this.buttonRestart.Size = new System.Drawing.Size(75, 23);
+            this.buttonRestart.TabIndex = 6;
+            this.buttonRestart.Text = "Заново";
+            this.buttonRestart.UseVisualStyleBackColor = false;
+            this.buttonRestart.Click += new System.EventHandler(this.ButtonRestart_Click);
             // 
             // MainFrom
             // 
@@ -102,6 +114,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(484, 361);
+            this.Controls.Add(this.buttonRestart);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.tbGuess);
             this.Controls.Add(this.buttonGuess);
@@ -130,6 +143,7 @@
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonGuess;
         private System.Windows.Forms.TextBox tbGuess;
+        private System.Windows.Forms.Button buttonRestart;
     }
 }
 
