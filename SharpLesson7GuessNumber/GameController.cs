@@ -29,7 +29,7 @@ namespace SharpLesson7GuessNumber {
         public bool CheckNumber(int number) {
             tryCount++;
             if (this.number == number) return true;
-            if (TriesLeft == 0) throw new Exception(String.Format("Больше не осталось попыток!\nЗагаданное число: {0}.\nНе хочешь ещё раз сыграть?", number));
+            if (TriesLeft == 0) throw new Exception(String.Format("Больше не осталось попыток!\nЗагаданное число: {0}.\nНе хочешь ещё раз сыграть?", this.number));
             return false;
         }
 
