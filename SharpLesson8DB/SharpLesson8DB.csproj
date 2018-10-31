@@ -77,5 +77,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharpLesson8DBLib\SharpLesson8DBLib.csproj">
+      <Project>{11525c2a-275f-4ef1-adc8-f0ad90846897}</Project>
+      <Name>SharpLesson8DBLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
