@@ -12,7 +12,7 @@ using SharpLesson8DBLib;
 namespace SharpLesson8Game {
     public partial class MainForm : Form {
         Database database;
-        List<Question> list;
+        GameController game;
 
         public MainForm() {
             InitializeComponent();
@@ -31,6 +31,8 @@ namespace SharpLesson8Game {
 
             btFalse.Enabled = false;
             btFalse.Visible = false;
+
+            tbQuestion.Text = "Нажмите кнопку начать, чтобы запустить игру";
         }
 
         private void BtStart_Click(object sender, EventArgs e) {
@@ -46,7 +48,28 @@ namespace SharpLesson8Game {
             //загружаем список вопросов
             database = new Database("data.xml");
             database.Load();
-            list = database.List;
+            game = new GameController(database.List);
+            tbQuestion.Text = game.Question;
+        }
+
+        private void UpdateInfo() {
+            //переходим на следующий вопрос
+            if (!game.NextQuestion()) {
+                MessageBox.Show(String.Format("Игра окончена! Количество правильных ответов {0} их {1}", game.CorrectAnswers, game.QuestionNumber));
+                InitGame();
+                return;
+            }
+            tbQuestion.Text = game.Question;
+        }
+
+        private void BtTrue_Click(object sender, EventArgs e) {
+            game.CheckAnswer(true);
+            UpdateInfo();
+        }
+
+        private void btFalse_Click(object sender, EventArgs e) {
+            game.CheckAnswer(false);
+            UpdateInfo();
         }
     }
 }

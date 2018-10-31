@@ -47,6 +47,7 @@
             this.btTrue.TabIndex = 1;
             this.btTrue.Text = "Верю";
             this.btTrue.UseVisualStyleBackColor = true;
+            this.btTrue.Click += new System.EventHandler(this.BtTrue_Click);
             // 
             // btFalse
             // 
@@ -56,6 +57,7 @@
             this.btFalse.TabIndex = 2;
             this.btFalse.Text = "Не верю";
             this.btFalse.UseVisualStyleBackColor = true;
+            this.btFalse.Click += new System.EventHandler(this.btFalse_Click);
             // 
             // btStart
             // 

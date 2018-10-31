@@ -18,6 +18,12 @@ namespace SharpLesson8Game {
             }
         }
 
+        public int QuestionNumber {
+            get {
+                return list.Count;
+            }
+        }
+
         //текущий вопрос
         public string Question {
             get {
