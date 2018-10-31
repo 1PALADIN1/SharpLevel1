@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ArrayOfQuestion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Question>
+    <Text>В Японии ученики на доске пишут кисточкой с цветными чернилами?</Text>
+    <TrueFalse>true</TrueFalse>
+  </Question>
+  <Question>
+    <Text>В Австралии практикуется применение одноразовых школьных досок?</Text>
+    <TrueFalse>false</TrueFalse>
+  </Question>
+  <Question>
+    <Text>Авторучка была изобретена еще в Древнем Египте?</Text>
+    <TrueFalse>true</TrueFalse>
+  </Question>
+  <Question>
+    <Text>Шариковая ручка сначала применялась только военными летчиками?</Text>
+    <TrueFalse>true</TrueFalse>
+  </Question>
+  <Question>
+    <Text>В некоторые виды цветных карандашей добавляется экстракт моркови для большей прочности грифеля?</Text>
+    <TrueFalse>false</TrueFalse>
+  </Question>
+  <Question>
+    <Text>Если пчела ужалит кого-либо, то она погибнет? </Text>
+    <TrueFalse>true</TrueFalse>
+  </Question>
+  <Question>
+    <Text>Спартанские воины перед битвой опрыскивали волосы духами.</Text>
+    <TrueFalse>true</TrueFalse>
+  </Question>
+  <Question>
+    <Text>Жирафы по ночам отыскивают с помощью эха листья, которыми питаются?</Text>
+    <TrueFalse>false</TrueFalse>
+  </Question>
+  <Question>
+    <Text>Больше всего репы выращивают в России?</Text>
+    <TrueFalse>false</TrueFalse>
+  </Question>
+  <Question>
+    <Text>В некоторых странах жуков-светляков используют в качестве осветительных приборов? </Text>
+    <TrueFalse>true</TrueFalse>
+  </Question>
+</ArrayOfQuestion>
