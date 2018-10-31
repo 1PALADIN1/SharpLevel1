@@ -26,5 +26,9 @@ namespace SharpLesson8DB {
         public MainForm() {
             InitializeComponent();
         }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e) {
+            Application.Exit();
+        }
     }
 }
