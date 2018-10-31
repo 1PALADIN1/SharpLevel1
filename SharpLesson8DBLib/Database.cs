@@ -6,7 +6,7 @@ using System.IO;
 namespace SharpLesson8DBLib
 {
     // Класс для хранения списка вопросов. А так же для сериализации в XML и десериализации из XML
-    class Database {
+    public class Database {
         string fileName;
         List<Question> list;
 
