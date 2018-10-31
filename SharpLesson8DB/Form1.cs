@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SharpLesson8DBLib;
 
 /*
 1. а) Создать приложение, показанное на уроке, добавив в него защиту от
@@ -23,12 +24,60 @@ using System.Windows.Forms;
 */
 namespace SharpLesson8DB {
     public partial class MainForm : Form {
+        Database database;
+        BindingSource bs;
+
         public MainForm() {
             InitializeComponent();
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e) {
             Application.Exit();
+        }
+
+        private void NewToolStripMenuItem_Click(object sender, EventArgs e) {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "XML файлы|*.xml|Все файлы(*.*)|*.*";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK) {
+                database = new Database(saveFileDialog.FileName);
+                this.Text = saveFileDialog.FileName;
+                bs = new BindingSource();
+                bs.DataSource = database;
+                bs.DataMember = "List";
+                tbQuestion.DataBindings.Add("Text", bs, "Text");
+                chbTrueFalse.DataBindings.Add("Checked", bs, "TrueFalse");
+                bnQuestion.BindingSource = bs;
+                dgvQuestion.DataSource = bs;
+            };
+        }
+
+        private void SaveToolStripMenuItem_Click(object sender, EventArgs e) {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "XML файлы|*.xml|Все файлы(*.*)|*.*";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK) {
+                database.Save();
+            }
+        }
+
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e) {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "XML файлы|*.xml|Все файлы(*.*)|*.*";
+            if (openFileDialog.ShowDialog() == DialogResult.OK) {
+                database = new Database(openFileDialog.FileName);
+                database.Load();
+                this.Text = openFileDialog.FileName;
+                bs = new BindingSource();
+                bs.DataSource = database;
+                bs.DataMember = "List";
+                tbQuestion.DataBindings.Clear();
+                tbQuestion.DataBindings.Add("Text", bs, "Text");
+                chbTrueFalse.DataBindings.Clear();
+                chbTrueFalse.DataBindings.Add("Checked", bs, "TrueFalse");
+                bnQuestion.BindingSource = bs;
+                dgvQuestion.DataSource = bs;
+            }
         }
     }
 }
